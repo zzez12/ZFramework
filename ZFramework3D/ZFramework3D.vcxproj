@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{25B8050F-F431-45DE-B14E-BC81E2E613D3}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>
+    </CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\debug\$(ConfigurationName)</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\bin\$(ConfigurationName)</OutDir>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../QGLViewer;D:\Program Files\Intel\MKL\10.0.1.015\include;../ExLib/Ann/include;../ExLib/kmlocal-1.7.2;../Eigen/Cholmod;../ExLib/WildMagic4/include;D:/CGAL/CGAL-4.0.2/build/include;D:/CGAL/CGAL-4.0.2/include;D:/CGAL/CGAL-4.0.2/auxiliary/gmp/include;D:\boost\boost_1_47_0;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../bin;../ExLib/Ann/lib;../ExLib/Arpack;D:\Program Files\Intel\MKL\10.0.1.015\ia32\lib;../ExLib/Cholmod;../ExLib/WildMagic4/lib;D:\CGAL\CGAL-4.0.2\build\lib\Release;D:\boost\boost_1_47_0\bin\vc10\lib;D:\CGAL\CGAL-4.0.2\auxiliary\gmp\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../QGLViewer;D:\Program Files\Intel\MKL\10.0.1.015\include;../ExLib/Ann/include;../ExLib/kmlocal-1.7.2;../Eigen/cholmod;../ExLib/expmap;../ExLib/WildMagic4/Include;D:\CGAL\CGAL-4.0.2\include;D:/CGAL/CGAL-4.0.2/build/include;D:\boost\boost_1_47_0;D:/CGAL/CGAL-4.0.2/auxiliary/gmp/include;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../debug;../ExLib/Ann/Lib;D:\Program Files\Intel\MKL\10.0.1.015\ia32\lib;../ExLib/Arpack;../ExLib/Cholmod;../ExLib/WildMagic4/lib;../QGLViewer/Debug/;D:/CGAL/CGAL-4.0.2/build/lib;D:\boost\boost_1_47_0\bin\vc10\lib;D:\CGAL\CGAL-4.0.2\auxiliary\gmp\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_OPENGL_LIB;QT_XMLPATTERNS_LIB;ANSI;NOMINMAX;QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\qtmain;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtXmlPatterns;.\;../ExLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;QtCored4.lib;QtGuid4.lib;QtXmld4.lib;QtOpenGLd4.lib;QtXmlPatternsd4.lib;QGLViewerd2.lib;mkl_c.lib;mkl_solver.lib;libguide40.lib;arpack.lib;ANN.lib;libcholmod.lib;libamd.lib;libcblas.lib;libcamd.lib;libccolamd.lib;libcerbla.lib;libcolamd.lib;libmetis_CHOLMOD.lib;Wm4Foundation90d_MDd.lib;libmpfr-4.lib;libgmp-10.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_OPENGL_LIB;QT_XMLPATTERNS_LIB;ANSI;NOMINMAX;QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\qtmain;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtXmlPatterns;.\;..\ExLib;..\ExLib\HLBFGS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;QtCore4.lib;QtGui4.lib;QtXml4.lib;QtOpenGL4.lib;mkl_c.lib;mkl_solver.lib;libguide40.lib;QtXmlPatterns4.lib;QGLViewer2.lib;ANN.lib;arpack.lib;libcholmod.lib;libamd.lib;libcblas.lib;libcamd.lib;libccolamd.lib;libcerbla.lib;libcolamd.lib;libmetis_CHOLMOD.lib;Wm4Foundation90_MD.lib;libmpfr-4.lib;libgmp-10.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Eigen\mkl_addon.cpp" />
+    <ClCompile Include="..\Eigen\mkl_addonNew.cpp" />
+    <ClCompile Include="..\Eigen\nrutil.cpp" />
+    <ClCompile Include="..\ExLib\expmap\ExpMapGenerator.cpp" />
+    <ClCompile Include="..\ExLib\expmap\Frame.cpp" />
+    <ClCompile Include="..\ExLib\expmap\IMesh.cpp" />
+    <ClCompile Include="..\ExLib\expmap\IMeshBVTree.cpp" />
+    <ClCompile Include="..\ExLib\expmap\MeshUtils.cpp" />
+    <ClCompile Include="..\ExLib\expmap\VectorUtil.cpp" />
+    <ClCompile Include="..\ExLib\expmap\VFTriangleMesh.cpp" />
+    <ClCompile Include="..\ExLib\expmap\WmlExtPlane3.cpp" />
+    <ClCompile Include="..\ExLib\HLBFGS\HLBFGS.cpp" />
+    <ClCompile Include="..\ExLib\HLBFGS\HLBFGS_BLAS.cpp" />
+    <ClCompile Include="..\ExLib\HLBFGS\ICFS.cpp" />
+    <ClCompile Include="..\ExLib\HLBFGS\LineSearch.cpp" />
+    <ClCompile Include="..\ExLib\HLBFGS\Lite_Sparse_Matrix.cpp" />
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KCtree.cpp" />
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KCutil.cpp" />
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KMcenters.cpp" />
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KMdata.cpp" />
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KMeans.cpp" />
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KMfilterCenters.cpp" />
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KMlocal.cpp" />
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KMrand.cpp" />
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KMterm.cpp" />
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KM_ANN.cpp" />
+    <ClCompile Include="..\ExLib\LpCVT\algebra\F_Lp.cpp" />
+    <ClCompile Include="..\ExLib\LpCVT\combinatorics\delaunay.cpp" />
+    <ClCompile Include="..\ExLib\LpCVT\combinatorics\delaunay_CGAL.cpp" />
+    <ClCompile Include="..\ExLib\LpCVT\combinatorics\exact\RVD_predicates.cpp" />
+    <ClCompile Include="..\ExLib\LpCVT\combinatorics\mesh.cpp" />
+    <ClCompile Include="..\ExLib\LpCVT\common\processor.cpp" />
+    <ClCompile Include="..\Math\Matrix.cpp" />
+    <ClCompile Include="..\Scene\Mesh3D.cpp" />
+    <ClCompile Include="AnnWarper.cpp" />
+    <ClCompile Include="AnnWarper_Eigen.cpp" />
+    <ClCompile Include="Color.cpp" />
+    <ClCompile Include="CVTRenderer.cpp" />
+    <ClCompile Include="GeneratedFiles\Debug\moc_qglviewerwidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_zframework3d.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_zframework3d.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qglviewerwidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_zframework3d.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MeshRenderer.cpp" />
+    <ClCompile Include="qglviewerwidget.cpp" />
+    <ClCompile Include="RenderOption.cpp" />
+    <ClCompile Include="ZCVTAlgorithms.cpp" />
+    <ClCompile Include="ZCVTData.cpp" />
+    <ClCompile Include="ZDataManager.cpp" />
+    <ClCompile Include="ZEigenData.cpp" />
+    <ClCompile Include="ZExpMapGenerateWarp.cpp" />
+    <ClCompile Include="zframework3d.cpp" />
+    <ClCompile Include="ZIsoLine.cpp" />
+    <ClCompile Include="ZIsoLineContainer.cpp" />
+    <ClCompile Include="ZKMeansCluster.cpp" />
+    <ClCompile Include="ZMeshAlgorithms.cpp" />
+    <ClCompile Include="ZMeshBilateralFilter.cpp" />
+    <ClCompile Include="ZMeshFilter.cpp" />
+    <ClCompile Include="ZMeshFilterGaussian.cpp" />
+    <ClCompile Include="ZMeshFilterGaussian2.cpp" />
+    <ClCompile Include="ZMeshFilterManifold.cpp" />
+    <ClCompile Include="ZMeshFilterWeightedGaussian.cpp" />
+    <ClCompile Include="ZMeshJointBilateralFiltering.cpp" />
+    <ClCompile Include="ZMeshProjector.cpp" />
+    <ClCompile Include="ZPlane.cpp" />
+    <ClCompile Include="ZQuadrangulation.cpp" />
+    <ClCompile Include="ZQueryMesh.cpp" />
+    <ClCompile Include="ZVoronoi.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="zframework3d.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"   -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_CORE_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_XMLPATTERNS_LIB -DANSI -DNOMINMAX -DQT_DLL  "-I." "-I.\GeneratedFiles" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\qtmain" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXmlPatterns" "-I." "-I.\..\ExLib" "-I." "-I." "-I." "zframework3d.h" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"   -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_XMLPATTERNS_LIB -DANSI -DNOMINMAX -DQT_DLL  "-I." "-I.\GeneratedFiles" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\qtmain" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXmlPatterns" "-I." "-I.\..\ExLib" "-I.\..\ExLib\hlbfgs" "-I." "-I." "-I." "zframework3d.h" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="zframework3d.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Eigen\mkl_addon.h" />
+    <ClInclude Include="..\Eigen\mkl_addonNew.h" />
+    <ClInclude Include="..\Eigen\nrutil.h" />
+    <ClInclude Include="..\Eigen\speigenNew.h" />
+    <ClInclude Include="..\Eigen\spmatrix.h" />
+    <ClInclude Include="..\Eigen\spmatrixNew.h" />
+    <ClInclude Include="..\Eigen\svd.h" />
+    <ClInclude Include="..\ExLib\ANN\include\ANN.h" />
+    <ClInclude Include="..\ExLib\ANN\include\ANNperf.h" />
+    <ClInclude Include="..\ExLib\ANN\include\ANNx.h" />
+    <ClInclude Include="..\ExLib\expmap\DynamicVector.h" />
+    <ClInclude Include="..\ExLib\expmap\ExpMapGenerator.h" />
+    <ClInclude Include="..\ExLib\expmap\Frame.h" />
+    <ClInclude Include="..\ExLib\expmap\IMesh.h" />
+    <ClInclude Include="..\ExLib\expmap\IMeshBVTree.h" />
+    <ClInclude Include="..\ExLib\expmap\MemoryPool.h" />
+    <ClInclude Include="..\ExLib\expmap\MeshUtils.h" />
+    <ClInclude Include="..\ExLib\expmap\ParticleGrid.h" />
+    <ClInclude Include="..\ExLib\expmap\RefCountedVector.h" />
+    <ClInclude Include="..\ExLib\expmap\SparseArray.h" />
+    <ClInclude Include="..\ExLib\expmap\VectorUtil.h" />
+    <ClInclude Include="..\ExLib\expmap\VFTriangleMesh.h" />
+    <ClInclude Include="..\ExLib\expmap\WmlExtPlane3.h" />
+    <ClInclude Include="..\ExLib\HLBFGS\HLBFGS.h" />
+    <ClInclude Include="..\ExLib\HLBFGS\HLBFGS_BLAS.h" />
+    <ClInclude Include="..\ExLib\HLBFGS\ICFS.h" />
+    <ClInclude Include="..\ExLib\HLBFGS\LineSearch.h" />
+    <ClInclude Include="..\ExLib\HLBFGS\Lite_Sparse_Matrix.h" />
+    <ClInclude Include="..\ExLib\HLBFGS\Sparse_Entry.h" />
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KCtree.h" />
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KCutil.h" />
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KMcenters.h" />
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KMdata.h" />
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KMeans.h" />
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KMfilterCenters.h" />
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KMlocal.h" />
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KMrand.h" />
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KMterm.h" />
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KM_ANN.h" />
+    <ClInclude Include="..\Math\Matrix.h" />
+    <ClInclude Include="..\Math\vector2.h" />
+    <ClInclude Include="..\Math\vector3.h" />
+    <ClInclude Include="..\Scene\Mesh3D.h" />
+    <ClInclude Include="ANNWarper.h" />
+    <ClInclude Include="AnnWarper_Eigen.h" />
+    <ClInclude Include="ANNWarper_N.h" />
+    <ClInclude Include="CGAL_Algorithms.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="CVTRenderer.h" />
+    <ClInclude Include="GeneratedFiles\ui_qglviewerwidget.h" />
+    <ClInclude Include="GeneratedFiles\ui_zframework3d.h" />
+    <ClInclude Include="GlobalDefs.h" />
+    <ClInclude Include="mathUtils.h" />
+    <ClInclude Include="MeshRenderer.h" />
+    <ClInclude Include="MeshTools.h" />
+    <ClInclude Include="randomGenerator.h" />
+    <ClInclude Include="RenderOption.h" />
+    <ClInclude Include="SphericalSystem.h" />
+    <ClInclude Include="vectorN.h" />
+    <ClInclude Include="ViewerOptions.h" />
+    <ClInclude Include="ZCVTAlgorithms.h" />
+    <ClInclude Include="ZCVTData.h" />
+    <ClInclude Include="ZCVTEnergy.h" />
+    <ClInclude Include="ZDataManager.h" />
+    <ClInclude Include="ZDelaunay.h" />
+    <ClInclude Include="ZEigenData.h" />
+    <ClInclude Include="ZExpMapGenerateWarp.h" />
+    <ClInclude Include="ZFileHelper.h" />
+    <ClInclude Include="ZIsoLine.h" />
+    <ClInclude Include="ZIsoLineContainer.h" />
+    <ClInclude Include="ZKernelFunc.h" />
+    <ClInclude Include="ZKMeansCluster.h" />
+    <ClInclude Include="ZLine.h" />
+    <ClInclude Include="ZMathAlgorithms.h" />
+    <ClInclude Include="ZMeshAlgorithms.h" />
+    <ClInclude Include="ZMeshBilateralFilter.h" />
+    <ClInclude Include="ZMeshFilter.h" />
+    <ClInclude Include="ZMeshFilterGaussian.h" />
+    <ClInclude Include="ZMeshFilterGaussian2.h" />
+    <ClInclude Include="ZMeshFilterManifold.h" />
+    <ClInclude Include="ZMeshFilterWeightedGaussian.h" />
+    <ClInclude Include="ZMeshJointBilateralFiltering.h" />
+    <ClInclude Include="ZMeshParser.h" />
+    <ClInclude Include="ZMeshProjector.h" />
+    <ClInclude Include="ZMeshSurfacePoint.h" />
+    <ClInclude Include="ZPlane.h" />
+    <ClInclude Include="ZQuadrangulation.h" />
+    <ClInclude Include="ZQueryMesh.h" />
+    <ClInclude Include="ZRenderer.h" />
+    <ClInclude Include="ZConsoleColor.h" />
+    <ClInclude Include="ZVoronoi.h" />
+    <CustomBuild Include="qglviewerwidget.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"   -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_CORE_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_XMLPATTERNS_LIB -DANSI -DNOMINMAX -DQT_DLL  "-I." "-I.\GeneratedFiles" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\qtmain" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXmlPatterns" "-I." "-I.\..\ExLib" "-I." "-I." "-I." "qglviewerwidget.h" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"   -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_XMLPATTERNS_LIB -DANSI -DNOMINMAX -DQT_DLL  "-I." "-I.\GeneratedFiles" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\qtmain" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXmlPatterns" "-I." "-I.\..\ExLib" "-I.\..\ExLib\hlbfgs" "-I." "-I." "-I." "qglviewerwidget.h" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="zframework3d.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="qglviewerwidget.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties UicDir=".\GeneratedFiles" MocDir=".\GeneratedFiles\$(ConfigurationName)" MocOptions="" RccDir=".\GeneratedFiles" lupdateOnBuild="0" lupdateOptions="" lreleaseOptions="" QtVersion_x0020_Win32="4.8.2" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

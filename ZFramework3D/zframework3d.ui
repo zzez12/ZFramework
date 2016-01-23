@@ -1,0 +1,1631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ZFramework3DClass</class>
+ <widget class="QMainWindow" name="ZFramework3DClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>827</width>
+    <height>655</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ZFramework3D</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QGLViewerWidget" name="widget" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>827</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="action_Open"/>
+    <addaction name="action_Save"/>
+    <addaction name="actionE_xit"/>
+   </widget>
+   <widget class="QMenu" name="menuA_bout">
+    <property name="title">
+     <string>A&amp;bout</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuProjects">
+    <property name="title">
+     <string>Projects</string>
+    </property>
+    <addaction name="actionIsoLine"/>
+    <addaction name="actionManifold_Smooth"/>
+   </widget>
+   <widget class="QMenu" name="menuRender">
+    <property name="title">
+     <string>Render</string>
+    </property>
+    <addaction name="actionRender_Options"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuRender"/>
+   <addaction name="menuProjects"/>
+   <addaction name="menuA_bout"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>279</width>
+     <height>422</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>Project Commands</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="0" column="0">
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="currentIndex">
+        <number>2</number>
+       </property>
+       <widget class="QWidget" name="tabIsoLine">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <attribute name="title">
+         <string>IsoLine</string>
+        </attribute>
+        <layout class="QFormLayout" name="formLayout_3">
+         <property name="fieldGrowthPolicy">
+          <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+         </property>
+         <item row="0" column="0">
+          <widget class="QGroupBox" name="groupBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="title">
+            <string>Command</string>
+           </property>
+           <layout class="QFormLayout" name="formLayout_4">
+            <item row="0" column="0">
+             <widget class="QPushButton" name="pnCompLP">
+              <property name="text">
+               <string>Laplacian</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="cobLaplacianType">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <item>
+               <property name="text">
+                <string>Uniform</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Cotangent</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QPushButton" name="pnSaveLP">
+              <property name="text">
+               <string>Save Lap</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QPushButton" name="pnLoadLP">
+              <property name="text">
+               <string>Load Lap</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QPushButton" name="pnSaveEigen">
+              <property name="text">
+               <string>Save Eigen</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QPushButton" name="pnLoadEigen">
+              <property name="text">
+               <string>Load Eigen</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QPushButton" name="pnChangeIdx">
+              <property name="text">
+               <string>Change Idx</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QGroupBox" name="groupBox_2">
+           <property name="title">
+            <string>Command2</string>
+           </property>
+           <layout class="QFormLayout" name="formLayout_2">
+            <property name="fieldGrowthPolicy">
+             <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+            </property>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>K-means  K:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="leKmeansK">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0" colspan="2">
+             <widget class="QSlider" name="hSliderValue">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximum">
+               <number>1000</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="labelValue">
+              <property name="text">
+               <string>Value: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QPushButton" name="pnQuad">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Quad</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QPushButton" name="pnQuadInit">
+              <property name="text">
+               <string>Quad Init</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLineEdit" name="leFaceScale">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Face Scale</string>
+              </property>
+              <property name="text">
+               <string>20</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QLineEdit" name="leLambda">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>Lambda</string>
+              </property>
+              <property name="text">
+               <string>10</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QPushButton" name="pnTest1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Test1</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QPushButton" name="pnTest0">
+              <property name="text">
+               <string>Test0</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tabManifoldSmooth">
+        <attribute name="title">
+         <string>Manifold Smooth</string>
+        </attribute>
+        <layout class="QFormLayout" name="formLayout">
+         <property name="fieldGrowthPolicy">
+          <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+         </property>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="pnSmooth">
+           <property name="text">
+            <string>Smooth</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="pnSmooth2">
+           <property name="text">
+            <string>Smooth2</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLineEdit" name="leSigmaSpatial">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>75</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Sigma Spatial</string>
+           </property>
+           <property name="text">
+            <string>5</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="leSigmaRange">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>75</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Sigma Range</string>
+           </property>
+           <property name="text">
+            <string>3</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QPushButton" name="pnResetPosition">
+           <property name="text">
+            <string>Reset</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QPushButton" name="pnUpdateRange">
+           <property name="text">
+            <string>Update Range</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QPushButton" name="pnUpdatePositions">
+           <property name="text">
+            <string>Update Pos</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QPushButton" name="pnAddNoise">
+           <property name="text">
+            <string>Add Noise</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0" colspan="2">
+          <widget class="QGroupBox" name="groupBox_3">
+           <property name="title">
+            <string>Range Level Weights</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_5">
+            <item row="2" column="0">
+             <widget class="QLineEdit" name="leRangeWeight3">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>level 2: --</string>
+              </property>
+              <property name="text">
+               <string>1.0</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="leRangeWeight4">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>Level 2 : -+</string>
+              </property>
+              <property name="text">
+               <string>1.0</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLineEdit" name="leRangeWeight5">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>Level 2 : +-</string>
+              </property>
+              <property name="text">
+               <string>1.0</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="3">
+             <widget class="QLineEdit" name="leRangeWeight6">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>Level 2 : ++</string>
+              </property>
+              <property name="text">
+               <string>1.0</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLineEdit" name="leRangeWeight2">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>Level 1: +</string>
+              </property>
+              <property name="text">
+               <string>0.5</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="leRangeWeight1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Level 1 : -</string>
+              </property>
+              <property name="text">
+               <string>0.5</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="leRangeWeight0">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Level 0</string>
+              </property>
+              <property name="text">
+               <string>1.0</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tabLineCVT">
+        <attribute name="title">
+         <string>LineCVT</string>
+        </attribute>
+        <layout class="QFormLayout" name="formLayout_5">
+         <property name="fieldGrowthPolicy">
+          <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+         </property>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="pnCVTInit">
+           <property name="text">
+            <string>init</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="pnCVTRun">
+           <property name="text">
+            <string>Run</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="leSampleSize">
+           <property name="text">
+            <string>30</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QPushButton" name="pnCVTIterate">
+           <property name="text">
+            <string>Iterate</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_render">
+   <property name="windowTitle">
+    <string>IsoLine Render Tools</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="RenderOpt">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QTabWidget" name="tabIsoLineRenderTools">
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <widget class="QWidget" name="tab_isoLine">
+        <attribute name="title">
+         <string>IsoLine</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="0" column="0" rowspan="2" colspan="3">
+          <widget class="QWidget" name="RenderOptions" native="true">
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QCheckBox" name="cbTransparency">
+              <property name="text">
+               <string>transparency</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="cbRenderWireframe">
+              <property name="text">
+               <string>WireFrame</string>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="gbMesh">
+              <property name="title">
+               <string>Mesh</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_3">
+               <item row="0" column="0">
+                <widget class="QComboBox" name="cobRenderType">
+                 <property name="currentIndex">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>Hide Mesh</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Solid Flat</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Solid Smooth</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Vertex Color</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Face Color</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QCheckBox" name="cbIsoLines">
+           <property name="text">
+            <string>IsoLines</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4" colspan="2">
+          <widget class="QGroupBox" name="gbIsoLines">
+           <property name="title">
+            <string>IsoLines</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QCheckBox" name="cbShowIsoLines">
+              <property name="text">
+               <string>show</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="cbShowKmeanPlane">
+              <property name="text">
+               <string>Kmeans Plane</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cobIsoLines">
+              <item>
+               <property name="text">
+                <string>Iso-Line Points</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Iso-Line Lines</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Iso-Line Planes</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Iso-Line Lines-ByClusterId</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="1" column="4" rowspan="2">
+          <widget class="QSlider" name="hSliderIsoLine">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="5" rowspan="2">
+          <widget class="QLabel" name="labelIsoLineIdx">
+           <property name="text">
+            <string>IsoLineIdx: </string>
+           </property>
+           <property name="buddy">
+            <cstring>hSliderIsoLine</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QCheckBox" name="cbShowNormals">
+           <property name="text">
+            <string>Normals</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QCheckBox" name="cbClusteredLines">
+           <property name="text">
+            <string>Clustered</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2" colspan="2">
+          <widget class="QCheckBox" name="cbOneByOne">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>IsoLine OneByOne</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_line_cvt">
+        <attribute name="title">
+         <string>LineCVT</string>
+        </attribute>
+        <widget class="QCheckBox" name="cbShowCVTSamples">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>10</y>
+           <width>71</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Samples</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="cbShowCVTDelaunay">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>10</y>
+           <width>81</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Delaunay</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="cbShowCVTVoronoi">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>10</y>
+           <width>71</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Voronoi</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="cbShowCVTClippingRegion">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>40</y>
+           <width>71</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Clipping</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="cbShowCVTVoronoiVertices">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>40</y>
+           <width>71</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Vertex V</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="cbShowCVTDelaunayVertices">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>40</y>
+           <width>81</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Delaunay V</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="action_Open">
+   <property name="text">
+    <string>&amp;Open</string>
+   </property>
+  </action>
+  <action name="action_Save">
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+  </action>
+  <action name="actionE_xit">
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="actionIsoLine">
+   <property name="text">
+    <string>IsoLine</string>
+   </property>
+  </action>
+  <action name="actionManifold_Smooth">
+   <property name="text">
+    <string>Manifold Smooth</string>
+   </property>
+  </action>
+  <action name="actionRender_Options">
+   <property name="text">
+    <string>Render Options</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QGLViewerWidget</class>
+   <extends>QWidget</extends>
+   <header>qglviewerwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="zframework3d.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>action_Open</sender>
+   <signal>triggered()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_load_file()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_Save</sender>
+   <signal>triggered()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_save_file()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pnCompLP</sender>
+   <signal>clicked()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_compute_laplacian()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>61</x>
+     <y>125</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pnLoadLP</sender>
+   <signal>clicked()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_load_laplacian()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>125</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pnSaveLP</sender>
+   <signal>clicked()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_save_laplacian()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>75</x>
+     <y>125</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pnChangeIdx</sender>
+   <signal>clicked()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_change_idx()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>65</x>
+     <y>125</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pnLoadEigen</sender>
+   <signal>clicked()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_load_eigen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>125</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pnSaveEigen</sender>
+   <signal>clicked()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_save_eigen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>75</x>
+     <y>125</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pnTest0</sender>
+   <signal>clicked()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_test0()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>60</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hSliderIsoLine</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_update_render_opt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>87</x>
+     <y>529</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>409</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hSliderValue</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_compute_isoline()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbIsoLines</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_update_render_opt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>72</x>
+     <y>517</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbShowIsoLines</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_update_render_opt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>178</x>
+     <y>547</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pnTest1</sender>
+   <signal>clicked()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_test1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cobIsoLines</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_update_ui()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>178</x>
+     <y>547</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbOneByOne</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_update_render_opt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>72</x>
+     <y>529</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbShowKmeanPlane</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_update_render_opt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>178</x>
+     <y>547</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbClusteredLines</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_update_render_opt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>43</x>
+     <y>529</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pnQuad</sender>
+   <signal>clicked()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_test_quad()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pnQuadInit</sender>
+   <signal>clicked()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_test_quad_init()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>79</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRender_Options</sender>
+   <signal>triggered()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_show_renderOpt_window()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>389</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionIsoLine</sender>
+   <signal>triggered()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_show_project_window()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>389</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionManifold_Smooth</sender>
+   <signal>triggered()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_show_project_window()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>389</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbTransparency</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_update_render_opt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>76</x>
+     <y>547</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>404</x>
+     <y>360</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbRenderWireframe</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_update_render_opt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>547</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>404</x>
+     <y>360</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cobRenderType</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_update_render_opt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>547</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>404</x>
+     <y>360</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pnSmooth</sender>
+   <signal>clicked()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_ms_smooth()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>19</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>404</x>
+     <y>360</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pnResetPosition</sender>
+   <signal>clicked()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_ms_resetPositions()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>19</x>
+     <y>101</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>389</x>
+     <y>320</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pnAddNoise</sender>
+   <signal>clicked()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_ms_addNoise()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>101</x>
+     <y>101</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>389</x>
+     <y>320</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pnSmooth2</sender>
+   <signal>clicked()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_ms_smooth2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>101</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>293</x>
+     <y>-25</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pnUpdatePositions</sender>
+   <signal>clicked()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_ms_update_positions()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>101</x>
+     <y>109</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>223</x>
+     <y>-30</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbShowNormals</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_update_render_opt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>28</x>
+     <y>529</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>389</x>
+     <y>320</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pnUpdateRange</sender>
+   <signal>clicked()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_ms_update_range()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>19</x>
+     <y>109</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>83</x>
+     <y>-9</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pnCVTInit</sender>
+   <signal>clicked()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_cvt_init()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>70</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>485</x>
+     <y>-7</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pnCVTRun</sender>
+   <signal>clicked()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_cvt_run()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>36</x>
+     <y>142</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>362</x>
+     <y>-16</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbShowCVTSamples</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_update_render_opt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>66</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>327</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbShowCVTVoronoi</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_update_render_opt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>266</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>327</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbShowCVTDelaunay</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_update_render_opt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>176</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>327</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbShowCVTClippingRegion</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_update_render_opt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>66</x>
+     <y>556</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>327</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pnCVTIterate</sender>
+   <signal>clicked()</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_cvt_iterate()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>57</x>
+     <y>165</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>327</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbShowCVTVoronoiVertices</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_update_render_opt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>266</x>
+     <y>556</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>327</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbShowCVTDelaunayVertices</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>ZFramework3DClass</receiver>
+   <slot>slot_update_render_opt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>181</x>
+     <y>556</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>327</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>slot_load_file()</slot>
+  <slot>slot_save_file()</slot>
+  <slot>slot_compute_laplacian()</slot>
+  <slot>slot_save_laplacian()</slot>
+  <slot>slot_load_laplacian()</slot>
+  <slot>slot_change_idx()</slot>
+  <slot>slot_save_eigen()</slot>
+  <slot>slot_load_eigen()</slot>
+  <slot>slot_test0()</slot>
+  <slot>slot_update_render_opt()</slot>
+  <slot>slot_compute_isoline()</slot>
+  <slot>slot_test1()</slot>
+  <slot>slot_update_ui()</slot>
+  <slot>slot_update_paras()</slot>
+  <slot>slot_test_quad()</slot>
+  <slot>slot_test_quad_init()</slot>
+  <slot>slot_show_project_window()</slot>
+  <slot>slot_show_renderOpt_window()</slot>
+  <slot>slot_ms_smooth()</slot>
+  <slot>slot_ms_resetPositions()</slot>
+  <slot>slot_ms_addNoise()</slot>
+  <slot>slot_ms_smooth2()</slot>
+  <slot>slot_ms_update_positions()</slot>
+  <slot>slot_ms_update_range()</slot>
+  <slot>slot_cvt_init()</slot>
+  <slot>slot_cvt_run()</slot>
+  <slot>slot_cvt_iterate()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{7d764143-cafe-42c3-9033-797ea6ca1b15}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{4a0803ff-ace7-4a60-9966-cefe8f79f677}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{f9f9e1df-6870-4432-aae0-dc23f8511150}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{095bf31f-44af-439b-968f-2e08e88abf29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Qt">
+      <UniqueIdentifier>{62246ea6-d4d7-4e8a-803e-9acb14697160}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algorithm">
+      <UniqueIdentifier>{f89386db-9ed3-4973-9ad1-a0a478acd027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Eigen">
+      <UniqueIdentifier>{7e847a6a-1f23-4cc7-b3f7-3e585e59c6f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{7b18a618-fc2f-4d0c-9fe2-429ffb816779}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algorithm\Ann">
+      <UniqueIdentifier>{c24ace61-2af1-4a50-929d-92e0e7cee3e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algorithm\KMeans">
+      <UniqueIdentifier>{b309a137-76df-4436-8d7a-a99aaf04a84f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algorithm\ZKMeans">
+      <UniqueIdentifier>{b0ce522a-8297-49c2-b428-41a89ceb8ee4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algorithm\ExpMap">
+      <UniqueIdentifier>{23080143-c4c2-40c8-b162-2416f9fac048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algorithm\MeshFilters">
+      <UniqueIdentifier>{961bfffe-dd75-4c7d-ab73-4786cf6d455b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{e7b2006a-d0e5-49d7-8054-f7cb608add55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algorithm\CVT">
+      <UniqueIdentifier>{3bb27149-cc4c-42c8-ae4b-8a67395c7e66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algorithm\LpCVT">
+      <UniqueIdentifier>{9407a220-7d9e-4f94-b8b9-92d99d5e934d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math\HLBFGS">
+      <UniqueIdentifier>{f6938180-7192-45d9-a725-2a7520d1550b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_zframework3d.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_zframework3d.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_zframework3d.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qglviewerwidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qglviewerwidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Scene\Mesh3D.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Math\Matrix.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="ZDataManager.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="qglviewerwidget.cpp">
+      <Filter>Qt</Filter>
+    </ClCompile>
+    <ClCompile Include="zframework3d.cpp">
+      <Filter>Qt</Filter>
+    </ClCompile>
+    <ClCompile Include="ZMeshAlgorithms.cpp">
+      <Filter>algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Eigen\mkl_addon.cpp">
+      <Filter>Eigen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Eigen\mkl_addonNew.cpp">
+      <Filter>Eigen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Eigen\nrutil.cpp">
+      <Filter>Eigen</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshRenderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderOption.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="ZPlane.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="ZIsoLine.cpp">
+      <Filter>algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="AnnWarper.cpp">
+      <Filter>algorithm\Ann</Filter>
+    </ClCompile>
+    <ClCompile Include="ZMeshProjector.cpp">
+      <Filter>algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="ZIsoLineContainer.cpp">
+      <Filter>algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="ZEigenData.cpp">
+      <Filter>algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KCtree.cpp">
+      <Filter>algorithm\KMeans</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KCutil.cpp">
+      <Filter>algorithm\KMeans</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KM_ANN.cpp">
+      <Filter>algorithm\KMeans</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KMcenters.cpp">
+      <Filter>algorithm\KMeans</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KMdata.cpp">
+      <Filter>algorithm\KMeans</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KMeans.cpp">
+      <Filter>algorithm\KMeans</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KMfilterCenters.cpp">
+      <Filter>algorithm\KMeans</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KMlocal.cpp">
+      <Filter>algorithm\KMeans</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KMrand.cpp">
+      <Filter>algorithm\KMeans</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\kmlocal-1.7.2\KMterm.cpp">
+      <Filter>algorithm\KMeans</Filter>
+    </ClCompile>
+    <ClCompile Include="ZKMeansCluster.cpp">
+      <Filter>algorithm\ZKMeans</Filter>
+    </ClCompile>
+    <ClCompile Include="ZQuadrangulation.cpp">
+      <Filter>algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="ZExpMapGenerateWarp.cpp">
+      <Filter>algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Color.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\expmap\ExpMapGenerator.cpp">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\expmap\Frame.cpp">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\expmap\IMesh.cpp">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\expmap\IMeshBVTree.cpp">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\expmap\MeshUtils.cpp">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\expmap\VectorUtil.cpp">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\expmap\VFTriangleMesh.cpp">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\expmap\WmlExtPlane3.cpp">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClCompile>
+    <ClCompile Include="ZMeshFilter.cpp">
+      <Filter>algorithm\MeshFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="ZMeshFilterGaussian.cpp">
+      <Filter>algorithm\MeshFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="ZMeshFilterManifold.cpp">
+      <Filter>algorithm\MeshFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="ZMeshFilterWeightedGaussian.cpp">
+      <Filter>algorithm\MeshFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="ZMeshFilterGaussian2.cpp">
+      <Filter>algorithm\MeshFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="AnnWarper_Eigen.cpp">
+      <Filter>algorithm\Ann</Filter>
+    </ClCompile>
+    <ClCompile Include="ZMeshBilateralFilter.cpp">
+      <Filter>algorithm\MeshFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="ZMeshJointBilateralFiltering.cpp">
+      <Filter>algorithm\MeshFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="ZQueryMesh.cpp">
+      <Filter>algorithm\MeshFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="ZCVTAlgorithms.cpp">
+      <Filter>algorithm\CVT</Filter>
+    </ClCompile>
+    <ClCompile Include="CVTRenderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\LpCVT\combinatorics\delaunay.cpp">
+      <Filter>algorithm\LpCVT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\LpCVT\combinatorics\delaunay_CGAL.cpp">
+      <Filter>algorithm\LpCVT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\LpCVT\combinatorics\mesh.cpp">
+      <Filter>algorithm\LpCVT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\LpCVT\combinatorics\exact\RVD_predicates.cpp">
+      <Filter>algorithm\LpCVT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\LpCVT\algebra\F_Lp.cpp">
+      <Filter>algorithm\LpCVT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\LpCVT\common\processor.cpp">
+      <Filter>algorithm\LpCVT</Filter>
+    </ClCompile>
+    <ClCompile Include="ZVoronoi.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\HLBFGS\HLBFGS.cpp">
+      <Filter>Math\HLBFGS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\HLBFGS\HLBFGS_BLAS.cpp">
+      <Filter>Math\HLBFGS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\HLBFGS\ICFS.cpp">
+      <Filter>Math\HLBFGS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\HLBFGS\LineSearch.cpp">
+      <Filter>Math\HLBFGS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExLib\HLBFGS\Lite_Sparse_Matrix.cpp">
+      <Filter>Math\HLBFGS</Filter>
+    </ClCompile>
+    <ClCompile Include="ZCVTData.cpp">
+      <Filter>algorithm\CVT</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="zframework3d.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="zframework3d.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qglviewerwidget.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qglviewerwidget.h">
+      <Filter>Qt</Filter>
+    </CustomBuild>
+    <CustomBuild Include="zframework3d.h">
+      <Filter>Qt</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_zframework3d.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_qglviewerwidget.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Scene\Mesh3D.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Math\Matrix.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Math\vector3.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="ZRenderer.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="ZDataManager.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewerOptions.h">
+      <Filter>Qt</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMeshAlgorithms.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Eigen\mkl_addon.h">
+      <Filter>Eigen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Eigen\mkl_addonNew.h">
+      <Filter>Eigen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Eigen\nrutil.h">
+      <Filter>Eigen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Eigen\speigenNew.h">
+      <Filter>Eigen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Eigen\spmatrix.h">
+      <Filter>Eigen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Eigen\spmatrixNew.h">
+      <Filter>Eigen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Eigen\svd.h">
+      <Filter>Eigen</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshRenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderOption.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="ZPlane.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMathAlgorithms.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="ZIsoLine.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMeshSurfacePoint.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\ANN\include\ANN.h">
+      <Filter>algorithm\Ann</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\ANN\include\ANNperf.h">
+      <Filter>algorithm\Ann</Filter>
+    </ClInclude>
+    <ClInclude Include="ANNWarper.h">
+      <Filter>algorithm\Ann</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMeshProjector.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalDefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\ANN\include\ANNx.h">
+      <Filter>algorithm\Ann</Filter>
+    </ClInclude>
+    <ClInclude Include="ZIsoLineContainer.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="ZEigenData.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="ZConsoleColor.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="SphericalSystem.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KCtree.h">
+      <Filter>algorithm\KMeans</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KCutil.h">
+      <Filter>algorithm\KMeans</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KM_ANN.h">
+      <Filter>algorithm\KMeans</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KMcenters.h">
+      <Filter>algorithm\KMeans</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KMdata.h">
+      <Filter>algorithm\KMeans</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KMeans.h">
+      <Filter>algorithm\KMeans</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KMfilterCenters.h">
+      <Filter>algorithm\KMeans</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KMlocal.h">
+      <Filter>algorithm\KMeans</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KMrand.h">
+      <Filter>algorithm\KMeans</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\kmlocal-1.7.2\KMterm.h">
+      <Filter>algorithm\KMeans</Filter>
+    </ClInclude>
+    <ClInclude Include="ZKMeansCluster.h">
+      <Filter>algorithm\ZKMeans</Filter>
+    </ClInclude>
+    <ClInclude Include="vectorN.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="ANNWarper_N.h">
+      <Filter>algorithm\Ann</Filter>
+    </ClInclude>
+    <ClInclude Include="ZQuadrangulation.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshTools.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="ZExpMapGenerateWarp.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\expmap\DynamicVector.h">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\expmap\ExpMapGenerator.h">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\expmap\Frame.h">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\expmap\IMesh.h">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\expmap\IMeshBVTree.h">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\expmap\MemoryPool.h">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\expmap\MeshUtils.h">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\expmap\ParticleGrid.h">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\expmap\RefCountedVector.h">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\expmap\SparseArray.h">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\expmap\VectorUtil.h">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\expmap\VFTriangleMesh.h">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\expmap\WmlExtPlane3.h">
+      <Filter>algorithm\ExpMap</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMeshParser.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="ZKernelFunc.h">
+      <Filter>algorithm\MeshFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMeshFilter.h">
+      <Filter>algorithm\MeshFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMeshFilterGaussian.h">
+      <Filter>algorithm\MeshFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMeshFilterManifold.h">
+      <Filter>algorithm\MeshFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMeshFilterWeightedGaussian.h">
+      <Filter>algorithm\MeshFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMeshFilterGaussian2.h">
+      <Filter>algorithm\MeshFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="AnnWarper_Eigen.h">
+      <Filter>algorithm\Ann</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMeshBilateralFilter.h">
+      <Filter>algorithm\MeshFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="randomGenerator.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="ZFileHelper.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMeshJointBilateralFiltering.h">
+      <Filter>algorithm\MeshFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="ZQueryMesh.h">
+      <Filter>algorithm\MeshFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="ZCVTAlgorithms.h">
+      <Filter>algorithm\CVT</Filter>
+    </ClInclude>
+    <ClInclude Include="ZLine.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CVTRenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="CGAL_Algorithms.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="ZVoronoi.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="ZDelaunay.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\HLBFGS\HLBFGS.h">
+      <Filter>Math\HLBFGS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\HLBFGS\HLBFGS_BLAS.h">
+      <Filter>Math\HLBFGS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\HLBFGS\ICFS.h">
+      <Filter>Math\HLBFGS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\HLBFGS\LineSearch.h">
+      <Filter>Math\HLBFGS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\HLBFGS\Lite_Sparse_Matrix.h">
+      <Filter>Math\HLBFGS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExLib\HLBFGS\Sparse_Entry.h">
+      <Filter>Math\HLBFGS</Filter>
+    </ClInclude>
+    <ClInclude Include="ZCVTEnergy.h">
+      <Filter>algorithm\CVT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Math\vector2.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="ZCVTData.h">
+      <Filter>algorithm\CVT</Filter>
+    </ClInclude>
+    <ClInclude Include="mathUtils.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
