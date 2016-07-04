@@ -20,6 +20,7 @@ void CVTRenderer::setRenderType(int type)
 
 void CVTRenderer::setRenderType(const std::string& type)
 {
+	// add a temp code for testing pull-request and gerrit
 	renderOpt_.strRenderMethod = type;
 }
 
