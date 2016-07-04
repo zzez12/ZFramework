@@ -26,6 +26,7 @@ void CVTRenderer::setRenderType(const std::string& type)
 
 void CVTRenderer::beginToDraw()
 {
+	// add a temp code for testing pull-request and gerrit
 	glDisable(GL_LIGHTING);
 	glDisable(GL_DEPTH_TEST);
 }
